@@ -1,0 +1,11 @@
+# 忽略目录或文件
+build
+dist
+coverage
+node_modules
+public
+release
+.vscode
+
+# 忽略所有 html 文件
+*.html
