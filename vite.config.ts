@@ -6,6 +6,7 @@ import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import ViteCompression from 'vite-plugin-compression'
 import ViteImagemin from 'vite-plugin-imagemin'
 import path from 'path'
+import { resolve } from 'path'
 
 export default defineConfig({
   base: './',
@@ -90,5 +91,13 @@ export default defineConfig({
         includePaths: [path.resolve(__dirname, './src/styles')],
       },
     },
+  },
+  resolve: {
+    alias: [
+      {
+        find: '@',
+        replacement: resolve(__dirname, './src'),
+      },
+    ],
   },
 })
