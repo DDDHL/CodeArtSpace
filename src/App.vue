@@ -1,4 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useSetFontSize } from '@/hooks/useSetFontSize'
+useSetFontSize()
+</script>
 
 <template>
   <router-view></router-view>
